@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Jquery slider</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
               <p>java Developer</p>
             </div>
           </div>
-          <div class="slider-img active">
+          <div class="slider-img ">
             <img src="assets/4.png" alt="4" />
             <h1>kaity</h1>
             <div class="details">
@@ -67,5 +68,13 @@
           </div>
         </div>
       </section>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
 </body>
 </html>
